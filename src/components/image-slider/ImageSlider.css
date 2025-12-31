@@ -1,0 +1,50 @@
+.image-slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  border: #fff solid 1px;
+  user-select: none;
+}
+
+.show-image {
+  max-width: 300px;
+}
+
+.hide-image {
+  display: none;
+}
+
+.image-indicator {
+  position: absolute;
+  display: flex;
+  bottom: 5px;
+}
+
+.image-indicator-btn {
+  background-color: #fff;
+  opacity: 60%;
+  margin: 0 2px;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.active-image-indicator-btn {
+  background-color: #000;
+}
+
+.btn {
+  position: absolute;
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.right-btn {
+  right: 5px;
+}
+
+.left-btn {
+  left: 5px;
+}
