@@ -10,10 +10,23 @@ export default function ImageSlider({
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currImage, setCurrImage] = useState(0);
+  const [autoSlide, setAutoSlide] = useState(false);
 
   useEffect(() => {
     if (url !== "") loadImages(url);
   }, []);
+
+  useEffect(() => {
+    let timer = null;
+
+    if (autoSlide) {
+      timer = setInterval(() => {
+        handleImageSlideBtn(1);
+      }, 3000);
+    }
+
+    return () => clearInterval(timer);
+  }, [autoSlide, currImage]);
 
   async function loadImages(imageUrl) {
     try {
@@ -96,6 +109,13 @@ export default function ImageSlider({
             : null}
         </span>
       </div>
+      <button
+        onClick={() => {
+          setAutoSlide(!autoSlide);
+        }}
+      >
+        {autoSlide ? "Disable" : "Enable"} auto slide
+      </button>
       <Footer />
     </>
   );
