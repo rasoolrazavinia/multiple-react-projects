@@ -1,0 +1,28 @@
+.load-more-data-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.product {
+  border: #fff solid 1px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.no-more-data {
+  opacity: 60%;
+  margin-bottom: 20px;
+}

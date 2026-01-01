@@ -8,6 +8,7 @@ function HomePage() {
       <Link to="/random-color">Random Color Generator</Link>
       <Link to="/star-rating">Star Rating</Link>
       <Link to="/image-slider">Image Slider</Link>
+      <Link to="/load-more-data">Load More Data</Link>
     </div>
   );
 }
