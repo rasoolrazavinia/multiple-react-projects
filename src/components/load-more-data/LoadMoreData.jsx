@@ -36,8 +36,6 @@ export default function LoadMoreData() {
     fetchProducts();
   }, [loadCount]);
 
-  if (loading) return <div>Loading data, please wait...</div>;
-
   return (
     <>
       <div className="load-more-data-container">
@@ -60,7 +58,7 @@ export default function LoadMoreData() {
           disabled={disableBtn}
           onClick={() => setLoadCount(loadCount + 1)}
         >
-          Load More Products
+          {loading ? "Loading data, please wait..." : "Load More Products"}
         </button>
       </div>
       <Footer />
